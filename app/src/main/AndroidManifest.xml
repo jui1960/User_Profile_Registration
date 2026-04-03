@@ -12,20 +12,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UserProfileRegistration">
         <activity
-            android:name=".ProfileListActivity"
+            android:name=".View.ProfileListActivity"
             android:exported="false" />
         <activity
             android:name=".UpdateProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".SingleProfileActivity"
+            android:name=".View.SingleProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".AddPeofileActivity"
+            android:name=".View.AddPeofileActivity"
             android:exported="false" />
 
         <activity
-            android:name=".Welcome"
+            android:name=".View.Welcome"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

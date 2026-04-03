@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Add New Employee"
+        android:text="Add New User"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -45,7 +45,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Full Name"
+                android:hint="Name"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -61,7 +61,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:hint="Position (e.g. Manager)"
+                android:hint="Email"
                 app:layout_constraintTop_toBottomOf="@id/layoutName">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -77,7 +77,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:hint="Education (e.g. B.Sc in CSE)"
+                android:hint="Date Of Birth"
                 app:layout_constraintTop_toBottomOf="@id/layoutPosition">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -93,7 +93,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:hint="Monthly Salary"
+                android:hint="Address"
                 app:layout_constraintTop_toBottomOf="@id/layoutEducation">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -109,7 +109,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:hint="Experience (in years)"
+                android:hint="Phone Number"
                 app:layout_constraintTop_toBottomOf="@id/layoutSalary">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -124,7 +124,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="24dp"
-                android:text="Save Employee"
+                android:text="Save"
                 android:textAllCaps="false"
                 android:textSize="16sp"
                 app:cornerRadius="12dp"

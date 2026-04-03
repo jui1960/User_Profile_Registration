@@ -28,7 +28,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Track your workforce"
+            android:text="Track User"
             android:textColor="#E0E0E0"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -58,7 +58,7 @@
                 android:id="@+id/tvCountLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Total Employees"
+                android:text="Total Users"
                 android:textColor="#757575"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -96,7 +96,7 @@
         android:layout_margin="24dp"
         android:background="@drawable/search_bg"
         app:iconifiedByDefault="false"
-        app:queryHint="Search employee..."
+        app:queryHint="Search Users..."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/statsCard" />
