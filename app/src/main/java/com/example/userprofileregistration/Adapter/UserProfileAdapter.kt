@@ -28,7 +28,7 @@ class UserProfileAdapter(
 
 
         val user = list[position]
-        holder.binding.tvName.text = user.name
+        holder.binding.tvUserName.text = user.name
         holder.binding.tvEmail.text = user.email
 
         holder.binding.ivEdit.setOnClickListener {

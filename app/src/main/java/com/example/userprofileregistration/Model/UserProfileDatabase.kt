@@ -20,7 +20,6 @@ abstract class UserProfileDatabase() : RoomDatabase() {
                     UserProfileDatabase::class.java,
                     "User_db"
                 )
-                    .allowMainThreadQueries()
                     .build()
             }
             return INSTANCE!!

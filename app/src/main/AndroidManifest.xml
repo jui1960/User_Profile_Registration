@@ -21,7 +21,7 @@
             android:name=".View.SingleProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".View.AddPeofileActivity"
+            android:name=".View.AddProfileActivity"
             android:exported="false" />
 
         <activity
