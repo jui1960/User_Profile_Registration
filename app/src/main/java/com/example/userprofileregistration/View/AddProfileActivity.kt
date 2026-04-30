@@ -26,6 +26,9 @@ class AddProfileActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        binding.back.setOnClickListener {
+            finish()
+        }
 
 
         userViewModel = ViewModelProvider(this)[UserProfileViewModel::class.java]

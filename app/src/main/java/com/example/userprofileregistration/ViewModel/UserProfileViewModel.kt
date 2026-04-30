@@ -19,7 +19,7 @@ class UserProfileViewModel(application: Application) : AndroidViewModel(applicat
     val liveData = MutableLiveData<List<UserProfile>>()
 
     init {
-        val dao = UserProfileDatabase.getdatabse(application).userDao()
+        val dao = UserProfileDatabase.getDatabase(application).userDao()
         userViewModel = UserRepository(dao)
         loadViewModel()
     }
@@ -57,15 +57,6 @@ class UserProfileViewModel(application: Application) : AndroidViewModel(applicat
         }
 
 
-    }
-
-    fun searchViewModel(query: String) {
-        viewModelScope.launch(Dispatchers.IO) {
-            val data = userViewModel.searchUserRepo(query)
-            withContext(Dispatchers.Main) {
-                liveData.value = data
-            }
-        }
     }
 
 

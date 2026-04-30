@@ -13,7 +13,7 @@ abstract class UserProfileDatabase() : RoomDatabase() {
     companion object {
         private var INSTANCE: UserProfileDatabase? = null
 
-        fun getdatabse(context: Context): UserProfileDatabase {
+        fun getDatabase(context: Context): UserProfileDatabase {
             if (INSTANCE == null) {
                 INSTANCE = Room.databaseBuilder(
                     context.applicationContext,

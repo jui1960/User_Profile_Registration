@@ -5,7 +5,6 @@ import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.SearchView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
@@ -79,7 +78,7 @@ class ProfileListActivity : AppCompatActivity() {
                 },
                 onClick = { user ->
                     val intent = Intent(this, SingleProfileActivity::class.java)
-
+                    intent.putExtra("id", user.id)
                     intent.putExtra("name", user.name)
                     intent.putExtra("email", user.email)
                     intent.putExtra("dob", user.dob)
@@ -92,20 +91,6 @@ class ProfileListActivity : AppCompatActivity() {
 
         }
 
-        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(query: String?): Boolean {
-                return true
-            }
-
-            override fun onQueryTextChange(newText: String?): Boolean {
-                if (!newText.isNullOrEmpty()) {
-                    userViewModel.searchViewModel(newText)
-                } else {
-                    userViewModel.loadViewModel()
-                }
-                return true
-            }
-        })
 
     }
 

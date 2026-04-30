@@ -22,8 +22,5 @@ interface UserProfileDao {
     @Query("SELECT * FROM user_profile ORDER BY id DESC")
     suspend fun getUser(): List<UserProfile>
 
-    @Query("select * from user_profile where name like '%' || :query || '%'")
-    suspend fun searchUser(query: String): List<UserProfile>
-
 
 }

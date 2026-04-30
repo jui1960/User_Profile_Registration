@@ -13,6 +13,16 @@
         android:background="@color/design_default_color_primary"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/back"
+        android:layout_marginTop="10dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
@@ -41,7 +51,7 @@
             android:padding="24dp">
 
             <TextView
-                android:id="@+id/lblDescription"
+                android:id="@+id/lblFullName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Full Name"
@@ -51,7 +61,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tvDetailName"
+                android:id="@+id/tvName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="jui"
@@ -60,7 +70,7 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/lblDescription" />
+                app:layout_constraintTop_toBottomOf="@id/lblFullName" />
 
             <View
                 android:id="@+id/divider1"
@@ -68,10 +78,10 @@
                 android:layout_height="1dp"
                 android:layout_marginTop="12dp"
                 android:background="#EEEEEE"
-                app:layout_constraintTop_toBottomOf="@id/tvDetailName" />
+                app:layout_constraintTop_toBottomOf="@id/tvName" />
 
             <TextView
-                android:id="@+id/lblPosition"
+                android:id="@+id/lblEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -82,16 +92,16 @@
                 app:layout_constraintTop_toBottomOf="@id/divider1" />
 
             <TextView
-                android:id="@+id/tvDetailPosition"
+                android:id="@+id/tvEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="example.com"
+                android:text="example@mail.com"
                 android:textColor="#212121"
                 android:textSize="17sp"
-                app:layout_constraintTop_toBottomOf="@id/lblPosition" />
+                app:layout_constraintTop_toBottomOf="@id/lblEmail" />
 
             <TextView
-                android:id="@+id/lblEducation"
+                android:id="@+id/lblDob"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -99,19 +109,19 @@
                 android:textColor="#757575"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvDetailPosition" />
+                app:layout_constraintTop_toBottomOf="@id/tvEmail" />
 
             <TextView
-                android:id="@+id/tvDetailEducation"
+                android:id="@+id/tvDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="7 november"
+                android:text="7 November"
                 android:textColor="#212121"
                 android:textSize="17sp"
-                app:layout_constraintTop_toBottomOf="@id/lblEducation" />
+                app:layout_constraintTop_toBottomOf="@id/lblDob" />
 
             <TextView
-                android:id="@+id/lblSalary"
+                android:id="@+id/lblAddress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -119,36 +129,36 @@
                 android:textColor="#757575"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvDetailEducation" />
+                app:layout_constraintTop_toBottomOf="@id/tvDate" />
 
             <TextView
-                android:id="@+id/tvDetailSalary"
+                android:id="@+id/tvAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Dhaka"
                 android:textColor="#212121"
                 android:textSize="17sp"
-                app:layout_constraintTop_toBottomOf="@id/lblSalary" />
+                app:layout_constraintTop_toBottomOf="@id/lblAddress" />
 
             <TextView
-                android:id="@+id/lblExperience"
+                android:id="@+id/lblPhone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Phone NUmber"
+                android:text="Phone Number"
                 android:textColor="#757575"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvDetailSalary" />
+                app:layout_constraintTop_toBottomOf="@id/tvAddress" />
 
             <TextView
-                android:id="@+id/tvDetailExperience"
+                android:id="@+id/tvPhone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="01764627794"
                 android:textColor="#212121"
                 android:textSize="17sp"
-                app:layout_constraintTop_toBottomOf="@id/lblExperience" />
+                app:layout_constraintTop_toBottomOf="@id/lblPhone" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnEdit"
@@ -159,7 +169,21 @@
                 android:text="Edit Profile"
                 android:textAllCaps="false"
                 app:cornerRadius="12dp"
-                app:layout_constraintTop_toBottomOf="@id/tvDetailExperience" />
+                app:layout_constraintTop_toBottomOf="@id/tvPhone" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btndlt"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="16dp"
+                android:text="Delete Profile"
+                android:textAllCaps="false"
+                app:cornerRadius="12dp"
+                android:backgroundTint="#EB0D0D"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/btnEdit" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>

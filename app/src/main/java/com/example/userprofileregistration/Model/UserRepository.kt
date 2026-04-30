@@ -5,11 +5,6 @@ import androidx.room.Query
 
 class UserRepository(private val userRepo: UserProfileDao) {
 
-
-    suspend fun searchUserRepo(query: String): List<UserProfile> {
-        return userRepo.searchUser(query)
-    }
-
     suspend fun getAllUser(): List<UserProfile> {
         return userRepo.getUser()
     }
