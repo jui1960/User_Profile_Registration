@@ -17,7 +17,6 @@ import com.example.userprofileregistration.databinding.DialogBinding
 class ProfileListActivity : AppCompatActivity() {
     private lateinit var binding: ActivityProfileListBinding
     private lateinit var userViewModel: UserProfileViewModel
-    private lateinit var adapter: UserProfileAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,6 +53,7 @@ class ProfileListActivity : AppCompatActivity() {
                     intent.putExtra("id", user.id)
                     intent.putExtra("name", user.name)
                     intent.putExtra("email", user.email)
+                    intent.putExtra("address", user.Address)
                     intent.putExtra("dob", user.dob)
                     intent.putExtra("phone", user.number)
                     startActivity(intent)
@@ -81,6 +81,7 @@ class ProfileListActivity : AppCompatActivity() {
                     intent.putExtra("id", user.id)
                     intent.putExtra("name", user.name)
                     intent.putExtra("email", user.email)
+                    intent.putExtra("address", user.Address)
                     intent.putExtra("dob", user.dob)
                     intent.putExtra("phone", user.number)
                     startActivity(intent)
