@@ -1,15 +1,12 @@
 package com.example.userprofileregistration.ViewModel
 
+
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.viewModelScope
 import com.example.userprofileregistration.Model.UserProfile
 import com.example.userprofileregistration.Model.UserProfileDatabase
 import com.example.userprofileregistration.Model.UserRepository
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 class UserProfileViewModel(application: Application) : AndroidViewModel(application) {
 
@@ -26,38 +23,29 @@ class UserProfileViewModel(application: Application) : AndroidViewModel(applicat
 
 
     fun insertViewModel(user: UserProfile) {
-        viewModelScope.launch(Dispatchers.IO) {
-            userViewModel.insertRepo(user)
-            loadViewModel()
-        }
+
+        userViewModel.insertRepo(user)
+        loadViewModel()
     }
 
 
     fun updateViewModel(user: UserProfile) {
-        viewModelScope.launch(Dispatchers.IO) {
-            userViewModel.updateRepo(user)
-            loadViewModel()
-        }
+
+        userViewModel.updateRepo(user)
+        loadViewModel()
     }
+
 
     fun deleteViewModel(user: UserProfile) {
-        viewModelScope.launch(Dispatchers.IO) {
-            userViewModel.deleteRepo(user)
-            loadViewModel()
-        }
+
+        userViewModel.deleteRepo(user)
+        loadViewModel()
     }
+
 
     fun loadViewModel() {
-        viewModelScope.launch(Dispatchers.IO) {
-            val data = userViewModel.getAllUser()
-            withContext(Dispatchers.Main) {
-                liveData.value = data
-
-            }
-        }
-
-
+        val data = userViewModel.getAllUser()
+        liveData.value = data
     }
-
 
 }

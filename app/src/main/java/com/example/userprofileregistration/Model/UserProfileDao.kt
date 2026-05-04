@@ -1,6 +1,5 @@
 package com.example.userprofileregistration.Model
 
-import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
@@ -11,16 +10,16 @@ import androidx.room.Update
 interface UserProfileDao {
 
     @Insert
-    suspend fun insert(profile: UserProfile)
+    fun insert(profile: UserProfile)
 
     @Update
-    suspend fun update(profile: UserProfile)
+    fun update(profile: UserProfile)
 
     @Delete
-    suspend fun delete(profile: UserProfile)
+    fun delete(profile: UserProfile)
 
     @Query("SELECT * FROM user_profile ORDER BY id DESC")
-    suspend fun getUser(): List<UserProfile>
+    fun getUser(): List<UserProfile>
 
 
 }
