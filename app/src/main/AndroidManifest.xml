@@ -14,9 +14,7 @@
         <activity
             android:name=".View.ProfileListActivity"
             android:exported="false" />
-        <activity
-            android:name=".UpdateProfileActivity"
-            android:exported="false" />
+
         <activity
             android:name=".View.SingleProfileActivity"
             android:exported="false" />

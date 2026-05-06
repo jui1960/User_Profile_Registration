@@ -2,42 +2,46 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="@color/white">
+    android:background="?attr/colorSurface">
 
-    <!-- Welcome Text -->
 
+    <!-- Welcome Title -->
     <TextView
         android:id="@+id/welcomeTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="156dp"
         android:gravity="center"
-        android:text="Welcome!"
-        android:textColor="@android:color/black"
-        android:textSize="34sp"
-        android:textStyle="bold"
+        android:layout_marginHorizontal="24dp"
+        android:text="Welcome back!"
+        android:textAppearance="?attr/textAppearanceDisplaySmall"
+        android:textColor="?attr/colorOnSurface"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.38" />
 
-    <!-- Profile Button -->
 
-    <Button
+
+    <!-- Profile Button (Material Filled) -->
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/profileButton"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="264dp"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="40dp"
         android:text="Go to Profile"
-        android:backgroundTint="#0033CC"
-        android:textColor="@color/white"
+        android:backgroundTint="#00695C"
+        android:textAppearance="?attr/textAppearanceLabelLarge"
+        app:cornerRadius="16dp"
+        app:iconGravity="textStart"
+        app:iconPadding="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/welcomeTextView" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
